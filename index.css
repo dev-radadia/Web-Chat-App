@@ -1,0 +1,834 @@
+body{
+    background-color: #000000;
+}
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#505050; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #434343;
+  }
+  
+#msgmsg{
+    color:#ffffff;
+    background-color: #000000;
+    overflow: auto;
+    min-width: 50px;
+    height: 84%;
+    width: 70%;
+    position: absolute;
+    left: 1%;
+    border-style: solid;
+    border-color: #444444;
+    padding: 7px;
+    scroll-behavior: smooth;
+}
+
+.emojis{
+    background-color: #313131;
+    height: 278px;
+    width: 98%;
+    color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 0;
+    word-wrap: break-word;
+    border-style: solid;
+    border-color: #bbbbbb;
+    padding: 3px;
+    text-align: center;
+    border-radius: 0px 7px 7px 0px;
+    margin-top: 3px;
+}
+
+.allemojis{
+    background-color: #313131;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    transition: background-color 0.25s;
+}
+.allemojis:hover{
+    background-color: #545454;
+    cursor: pointer;
+}
+
+.allemojis:focus {
+    border: none;
+    outline: none;
+}
+
+.allstickers{
+    background-color: #313131;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    transition: background-color 0.25s;
+}
+.allstickers:hover{
+    background-color: #545454;
+    cursor: pointer;
+}
+
+.allstickers:focus {
+    border: none;
+    outline: none;
+}
+
+.Emodal-body .emoji_tag{
+    background-color: #3a3a3a;
+    height: auto;
+    width: 31px;
+    border-style: solid;
+    border-color: #bbbbbb;
+    padding: 2px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    font-size: 0;
+    text-align: center;
+    margin-top: 3px;
+    border-radius: 7px 0px 0px 7px;
+}
+
+.eee{
+    margin-top: 1px;
+    width: 30px;
+    height: 30px;
+    background-color: #727272;
+    text-align: center;
+    transition: background-color 0.25s;
+    border: none;
+}
+.eee:hover{
+    background-color: #494949;
+    cursor: pointer;
+}
+
+.eee:focus {
+    border: none;
+    outline: none;
+}
+
+#emoji_label{
+    cursor: pointer;
+}
+
+a{
+    color: #00ff00;
+    transition: color 0.3s;
+}
+
+a:hover{
+    color: #00ffff;
+}
+
+a:active{
+    color: #ff0000;
+}
+
+#scroll_to_bottom{
+    border-radius: 25px;
+    border: none;
+    height: 35px;
+    width: 35px;
+    color: #ffffff;
+    background-color: #505050;
+    position: absolute;
+    left: 68%;
+    top: 80%;
+    opacity:0.5;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#scroll_to_bottom:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #505050;
+}
+
+#scroll_to_bottom_of_msg:hover{
+    cursor: pointer;
+}
+#scroll_to_bottom:focus{
+    outline: none;
+    border: none;
+}
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+
+  .Emodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000000;
+    background-color: #00000066;
+  }
+  
+
+  .emojisarealreadyhereokokok{
+      font-size: 40px;
+      color: #ffffff;
+  }
+
+  .Emodal-header {
+    padding: 5px 16px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+  }
+
+
+  .Emodal-content {
+    position: relative;
+    background-color: #000000;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
+
+  
+  .Eclose {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .Eclose:hover,
+  .Eclose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  .Emodal-body {
+      padding: 5px 5px;
+      display: flex;
+    }
+  
+
+
+
+
+    .login_modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 150px;
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: #000000; /* Fallback color */
+        background-color: #00000066; /* Black w/ opacity */
+      }
+      
+      /* Modal Content */
+      .login_modal_content {
+        position: relative;
+        background-color: #000000;
+        color: #ffffff;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888888;
+        width: 80%;
+        box-shadow: 0 4px 8px 0 #00000033,0 6px 20px 0 #00000030;
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+      }
+
+  /* The Close Button */
+  .login_close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .login_close:hover,
+  .login_close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .login_modal_header {
+    padding: 2px 16px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+  }
+  
+  .login_modal_body {
+      padding: 2px 16px;
+      text-align: center;
+      font-size: 25px;
+    }
+  
+  .login_modal_footer {
+    padding: 2px 2px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+  }
+  .login_error{
+    padding: 2px 2px;
+    color: #ff0000;
+    text-align: center;
+    font-size: medium;
+  }
+  
+  .login_modal_body #show_pass{
+    color: #ffffff;
+    position: absolute;
+    font-size: x-large;
+    top: auto;
+    left: auto;
+}
+
+  .successlogin{
+    width: 100%;
+    height: 50px;
+    background-color: #00aa00;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: x-large;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.5s;
+}
+
+.successlogin:hover{
+    background-color: #007000;
+    cursor: pointer;
+}
+
+.formatloginohohoh{
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.email{
+    width: 280px;
+    height: 25px;
+    background-color: #343434;
+    color: #ffffff;
+}
+
+.password{
+    width: 280px;
+    height: 25px;
+    background-color: #343434;
+    color: #ffffff;
+}
+
+.email:focus,
+.password:focus{
+    outline: none;
+}
+
+#show_pass{
+    cursor: pointer;
+}
+
+
+.user_settings {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 150px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000000;
+    background-color: #00000066;
+  }
+  
+  /* Modal Content */
+  .user_modal_content {
+    position: relative;
+    background-color: #000000;
+    color: #ffffff;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 #00000033,0 6px 20px 0 #00000030;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+  /* The Close Button */
+  .user_close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .user_close:hover,
+  .user_close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .user_modal_header {
+    padding: 2px 16px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .user_modal_body {
+      padding: 2px 16px;
+      text-align: center;
+      font-size: 25px;
+    }
+  
+  .user_modal_footer {
+    padding: 2px 2px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+  }
+
+  .userdone{
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    background-color: #00aa00;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: x-large;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.5s;
+}
+
+.userdone:hover{
+    background-color: #007000;
+}
+
+
+.user_modal_header .avatar{
+    position: absolute;
+    width:55px;
+    height:55px;
+    border-radius: 50%;
+    border: solid;
+    border-color: #000000;
+    top: 1.5%;
+}
+
+.user_modal_body{
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    overflow: auto;
+}
+
+
+#userkanameyar{
+    font-size: 23px;
+    color: #ffffff;
+}
+
+.userhasanametoo{
+    font-size: 21px;
+    color: #ffffff;
+}
+
+.colorlonayar{
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.usercolor{
+    width:100px;
+    height: 25px;
+    background-color: #313131;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.usercolor:hover {
+    cursor: pointer;
+    background-color:#ffffff;
+    color: #000000;
+}
+
+.usercolor:focus{
+    outline: none;
+}
+
+#click_color_done{
+    background-color:#313131;
+    color: #ffffff;
+    border: 1px solid #000000;
+    display: inline-block;
+    padding: 6px 12px;
+    transition: background-color 0.5s, color 0.5s;
+    width: 37px;
+    height: 35px;
+}
+
+#click_color_done:hover {
+    cursor: pointer;
+    background-color:#ffffff;
+    color: #000000;
+}
+
+
+#click_color_done:focus{
+    outline:none;
+}
+
+.changenameyar{
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.custom-file-upload{
+    font-size: medium;
+    background-color:#313131;
+    color: #ffffff;
+    border: 1px solid #000000;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    width: 100px;
+    height: 18px;
+}
+
+#av_file {
+    display: none;
+}
+
+.custom-file-upload:hover {
+    background-color:#ffffff;
+    color: #000000;
+}
+
+.av_reset{
+    background-color:#313131;
+    color: #ffffff;
+    border: 1px solid #000000;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    width: 38px;
+    height: 32.5px;
+}
+.av_reset:hover {
+    background-color:#ffffff;
+    color: #000000;
+}
+
+.av_reset:focus{
+    outline: none;
+}
+
+.mailisseennow{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.userhasamailtoo{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 #00000033,0 6px 20px 0 #00000030;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+/* The Close Button */
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #ffffff;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #ffffff;
+  }
+
+
+
+
+  .login_button{
+    font-size: medium;
+    text-align: center;
+    color: #ffffff;
+    background-color: #00aa00;
+    border: solid;
+    border-color: #ffffff;
+    outline: none;
+    height: 40px;
+    width: 100px;
+    transition: background-color 0.5s;
+}
+
+.login_button:hover{
+    background-color: #007000;
+    cursor: pointer;
+}
+
+.signup{
+    font-size: medium;
+    text-align: center;
+    color: #ffffff;
+    background-color: #0000ff;
+    border: solid;
+    border-color: #ffffff;
+    outline: none;
+    height: 40px;
+    width: 100px;
+    transition: background-color 0.5s;
+}
+
+.signup:hover{
+    background-color: #000097;
+    cursor: pointer;
+}
+
+.login_and_signup_and_user_settings{
+    font-size: 0;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+
+.user_set{
+    height: 40px;
+    width: 200px;
+    color: #ffffff;
+    font-size: medium;
+    text-align: center;
+    transition: background-color 0.5s;
+    border: solid;
+    border-color: #ffffff;
+    background-color: #888888;
+}
+
+.user_set:focus{
+    outline: none;
+}
+
+.user_set:hover{
+   background-color: #494949;
+   cursor: pointer;
+}
+
+
+.logout{
+    height: 40px;
+    width: 200px;
+    color: #ffffff;
+    font-size: medium;
+    text-align: center;
+    transition: background-color 0.5s;
+    border: solid;
+    border-color: #ffffff;
+    background-color: #ff0000;
+}
+
+.logout:focus{
+    outline: none;
+}
+
+.logout:hover{
+   background-color: #b00000;
+   cursor: pointer;
+}
+
+
+
+#msghere{
+    display:inline-block;
+    background-color: #313131;
+    width: 62%;
+    height: 30px;
+    color: #ffffff;
+    border-radius: 10px;
+    resize: none;
+    padding: 5px;
+    outline: none;
+}
+
+#msghere:focus {
+    outline: none;
+}
+
+.send{
+    display:inline-block;
+    background-color: #7c7c7c;
+    color:#ffffff;
+    width:40px;
+    border-radius: 50%;
+    height: 40px;
+    border: none;
+    transition: background-color 0.25s, color 0.25s;
+}
+.send:hover{
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+.send:focus {
+    border: none;
+    outline: none;
+}
+
+
+#upoad-file-yar{
+    margin-left: 12.5px;
+    margin-top: 10px;
+}
+
+.file-upload {
+    display:inline-block;
+    background-color: #7c7c7c;
+    color: #ffffff;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    transition: background-color 0.25s, color 0.25s;
+    border-radius: 50%;
+  }
+  .file-upload:hover {
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  #msgfile{
+      display: none;
+  }
+
+  .file-upload:focus {
+    border: none;
+    outline: none;
+}
+
+.emojiok_button{
+    display:inline-block;
+    background-color: #7c7c7c;
+    color:#ffffff;
+    width:40px;
+    border-radius: 50%;
+    height: 40px;
+    border: none;
+    transition: background-color 0.25s, color 0.25s;
+}
+.emojiok_button:hover{
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+.emojiok_button:focus {
+    border: none;
+    outline: none;
+}
+
+.iwanttokeepeverythinginaline{
+    width: 98%;
+    display: flex;
+    position: absolute;
+    top: 91%;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--WEB PAGE TITLE-->
+  <title>
+    -By Dev
+  </title>
+  <!--WEB PAGE TITLE-->
+
+  <!--CSS-->
+  <link rel="stylesheet" href="index.css">
+  <!--CSS-->
+
+  <!--AWESOME FONT-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--AWESOME FONT-->
+</head>
+
+
+<body onload="getalldata_and_scroll()">
+
+
+<!--ALL MESSAGES-->
+<div id="msgmsg"></div>
+<!--ALL MESSAGES-->
+
+<!--SCROLL DOWN BUTTON-->
+<button onclick="fullyscrolldown()" title="Scroll to Bottom" id="scroll_to_bottom"><label class="fa fa-arrow-down" id="scroll_to_bottom_of_msg" style="font-size: large;"></label></button>
+<!--SCROLL DOWN BUTTON-->
+
+<div class="iwanttokeepeverythinginaline">
+
+<!--UPLOADING FILE IN MESSAGE-->
+<label id="msg_file_upload" class="file-upload" title="Upload Image">
+  <input title="Upload Image" type="file" id="msgfile" accept="image/*" onchange="msgfile(event)">
+  <i class="fa fa-upload" id="upoad-file-yar"></i>
+</label>
+<!--UPLOADING FILE IN MESSAGE-->
+
+&nbsp;
+
+<!--MESSAGE BOX-->
+<textarea id="msghere" placeholder="Type a Message..."></textarea>
+<!--MESSAGE BOX-->
+
+&nbsp;
+
+<!--SEND BUTTON-->
+<button onclick="send()" title="Send" class="send" id="msg_send"><i class="fa fa-send" style="font-size:20px"></i></button>
+<!--SEND BUTTON-->
+
+&nbsp;
+
+<!--EMOJI-->
+<button id="emojiok_button" class="emojiok_button" title="Emojis"><label class="fa fa-smile-o" id="emoji_label" style="font-size: x-large;"></label></button>
+</div>
+
+<div id="EmyModal" class="Emodal">
+
+  <div class="Emodal-content">
+    <div class="Emodal-header">
+      <span class="Eclose">&times;</span>
+      <center>
+      <label class="emojisarealreadyhereokokok">
+     <b>🤣 Emojis 😃</b>
+    </label>
+    </center>
+    </div>
+
+    <div class="Emodal-body">
+      
+<!--ALL EMOJIS TAG BUTTON-->
+<div class="emoji_tag">
+  <button class="eee" id="s_p" onclick="s_p()" title="Smileys & People"><label class="fa fa-smile-o" id="emoji_label" style="font-size: large;"></label></button><br>
+  <button class="eee" id="a_n" onclick="a_n()" title="Animals & Nature"><label class="fa fa-leaf" id="emoji_label" style="font-size: large;"></label></button><br>
+  <button class="eee" id="f_d" onclick="f_d()" title="Food & Drink"><label class="fa fa-coffee" id="emoji_label" style="font-size: large;"></label></button><br>
+  <button class="eee" id="e_a" onclick="e_a()" title="Activity"><label class="fa fa-soccer-ball-o" id="emoji_label" style="font-size: large;"></label></button><br>
+  <button class="eee" id="t_p" onclick="t_p()" title="Travel & Places"><label class="fa fa-car" id="emoji_label" style="font-size: large;"></label></button><br>
+  <button class="eee" id="e_o" onclick="e_o()" title="Objects"><label class="fa fa-lightbulb-o" id="emoji_label" style="font-size: large;"></label></button><br>
+  <button class="eee" id="e_s" onclick="e_s()" title="Symbols"><label class="fa fa-at" id="emoji_label" style="font-size: large;"></label></button><br>
+  <button class="eee" id="e_f" onclick="e_f()" title="Flags"><label class="fa fa-flag" id="emoji_label" style="font-size: large;"></label></button><br>
+  <button class="eee" id="e_f" onclick="sticker()" title="Stickers"><label class="fa fa-file" id="emoji_label" style="font-size: large;"></label></button><br>
+</div>
+<!--ALL EMOJIS TAG BUTTON-->
+
+
+<!--ALL EMOJIS-->
+<div class="emojis" id="all_emojis"></div>
+<!--ALL EMOJIS-->
+
+    </div>
+  </div>
+
+</div>
+<!--EMOJI-->
+
+<div class="login_and_signup_and_user_settings">
+  <button id="user_set" class="user_set" title="User Settings"><b>User Settings <label class="fa fa-user-circle-o"></label></b></button>
+  <br>
+<!--SIGN UP-->
+<a href="signup/signup.html" target="_blank">
+  <button id="signup" class="signup" title="Sign up">
+    <b>Sign up <label class="fa fa-user-plus"></label></b>
+  </button>
+</a>
+<!--SIGN UP-->
+
+
+<!--LOGIN FORM-->
+<button id="login_button" class="login_button" title="Login"><b>Login <label class="fa fa-sign-in"></label></b></button>
+<br>
+
+  <button id="logout" class="logout" onclick="logout()" title="Logout">
+    <b>Logout <label class="fa fa-sign-out"></label></b>
+  </button>
+</div>
+
+
+<div id="login_form" class="login_modal">
+
+
+  <div class="login_modal_content">
+    <form id="loginformokok">
+    <div class="login_modal_header">
+      <span class="login_close">&times;</span>
+      <h2><center><i class="formatloginohohoh"><b>LOGIN&nbsp;<label class="fa fa-sign-in"></label></b></i></center></h2>
+    </div>
+    <div class="login_modal_body">
+      <div class="login_error" id="login_error"></div>
+      <p>
+        Email&nbsp;&nbsp;&nbsp;<input type="email" class="email" id="email" required placeholder="Enter your email" 
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+      </p>
+      <p>
+        Password&nbsp;&nbsp;&nbsp;<input type="password" class="password" id="password" required placeholder="Enter your password">
+        &nbsp;<label id="show_pass" onclick="show_pass(this)" class="fa fa-eye-slash"></label>
+      </p>
+    
+    </div>
+
+    <div class="login_modal_footer">
+      <center>
+      <input type="submit" class="successlogin" onclick="successlogin()" value="Submit">
+    </center>
+    </div>
+  </form>
+  </div>
+</div>
+<!--LOGIN FORM-->
+
+
+<!--USER SETTINGS-->
+
+<div id="user_settings" class="user_settings">
+
+
+  <div class="user_modal_content">
+
+
+    <div class="user_modal_header">
+      <span class="user_close">&times;</span>
+      <center>
+        <b>
+          <font size="7">User Settings&nbsp;</font>
+    <!--AVATAR-->
+    <img title="Your Avatar" class="avatar" id="useravatar">
+    <!--AVATAR-->
+        </b>
+      </center>
+    </div>
+
+
+<div class="user_modal_body">
+
+
+<br>
+<label id="userkanameyar">Username :-</label>
+&nbsp;&nbsp;
+<label class="userhasanametoo" id="userhasanametoo"></label>
+
+<br><br>
+
+<label id="mailisseennow">Email :-</label>
+  &nbsp;&nbsp;
+  <label class="userhasamailtoo" id="userhasamailtoo"></label>
+
+<br><br>
+
+<label class="colorlonayar">User's Colour :-</label>&nbsp;&nbsp;
+<input title="Choose Color" type="color" id="user_color" class="usercolor" value="#ffffff">&nbsp;
+<button title="Default Color" id="click_color_done" onclick="clickcolor()"><label class="fa fa-refresh"></label></button>
+
+<br><br>
+
+<label class="changenameyar">
+  Change Avatar :-
+</label>
+&nbsp;&nbsp;
+<label id="avatarkouploadkaroon" class="custom-file-upload" title="Choose Avatar">
+  <input type="file"  accept="image/*" name="image" id="av_file" onchange="loadFile(event)">
+  <i class="fa fa-upload"></i> Choose File
+  </label>
+<button id="avneresetkaroon" class="av_reset" onclick="av_reset()" title="Reset Avatar"><font class="fa fa-refresh"></font></button>
+
+<br><br>
+
+    </div>
+
+
+    <div class="user_modal_footer">
+      <center>
+      <button class="userdone" id="userdone" onclick="userdone()">Save</button>
+      </center>
+    </div>
+  </div>
+</div>
+<!--USER SETTINGS-->
+
+
+
+
+
+<!--JAVASCRIPT-->
+<script src="allstickers.js"></script>
+<script src="menu.js"></script>
+<script src="login.js"></script>
+<script src="logindone.js"></script>
+<script src="getalldata.js"></script>
+<script src="msgkey.js"></script>
+<script src="avfile.js"></script>
+<script src="temoji.js"></script>
+<script src="usersettings.js"></script>
+<script src="emojimodal.js"></script>
+<script src="index.js"></script>
+<script src="onload.js"></script>
+<script src="emoji.js"></script>
+<script src="fileupload.js"></script>
+<script src="userdone.js"></script>
+<script src="stickers.js"></script>
+<!--JAVASCRIPT-->
+
+
+</body>
+</html>
+

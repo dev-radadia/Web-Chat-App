@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--Meta Tag help our webpage to make it friendly for all types of devices-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--Title-->
+    <title>-By Dev</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+
+<body>
+
+  <div id="succesisthebestway" class="alert success">
+    <span class="closebtn">&times;</span>  
+    <strong>Success!</strong> Your account is successfully created! <img width="20px" height="20px" src="https://i.pinimg.com/originals/5f/e0/e5/5fe0e55f8e19bc4cc3201876dce7b224.gif">
+  </div>
+
+
+
+<!--Sign Up Form-->
+<form id="signup_form">
+
+<!--Your Email-->
+  <div class="email_poition">
+    <label class="mail">
+        <b>Email</b>
+        <br>
+     </label>
+    <input type="email" class="email" id="email" required placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+  </div>
+
+
+<!--Choose a Username-->
+  <div class="username_poition">
+    <label class="user">
+        <b>Username</b>
+        <br>
+    </label>
+    <input maxlength="10" placeholder="Username (maximum 10 characters long)" type="text" id="username" class="username" required>
+  </div>
+
+
+<!--Choose a Password-->
+  <div class="password_poition">
+    <label class="pass">
+        <b>Password</b>
+        <br>
+    </label>
+    <input placeholder="Password (minimum 8 characters long)" type="password" id="password" class="password" required>
+  </div>
+
+
+<!--Retype Your Password-->
+  <div class="password1_poition">
+    <label class="pass1">
+        <b>Confirm Password</b>
+        <br>
+    </label>
+    <input placeholder="Retype Password" type="password" id="password1" class="password1" required>
+   </div>
+
+
+<!--Submit-->
+<div class="submit_poition">
+    <input type="submit" class="submit" id="submit" value="Sign Up" title="Submit"><br>
+    <b class="a_l">Already have an account? <a href="../index.html">Login</a></b>
+</div>
+
+<!--Error-->
+<div class="error" id="error"><div>
+
+</form>
+<!--Sign Up Form Done-->
+
+
+<!--Javascript-->
+ <script src="signup.js"></script>
+ <script src="start.js"></script>
+
+
+</body>
+</html>

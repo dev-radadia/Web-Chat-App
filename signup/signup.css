@@ -1,0 +1,192 @@
+body, html {
+    height: 100%;
+  }
+  
+  body {
+    background-image: url("https://i.pinimg.com/originals/f6/15/74/f615740d8ec75ad36e322ecd9da8b129.gif");
+    height: 98%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus{
+  border:solid 1px;
+  border-color: #00ff00;
+  outline:none;
+}
+
+::placeholder {
+  font-size: 18px;
+}
+
+:-ms-input-placeholder {
+  font-size: 18px;
+}
+
+::-ms-input-placeholder {
+  font-size: 18px;
+}
+
+label{
+  background-image: linear-gradient(50deg, #ff0000, #ffa500, #ffff00, #00ff00, #00ffff, #0000ff, #800080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+.email_poition{
+  position: absolute;
+  top: 6%;
+  height: 8%;
+  width: 98%;
+  text-align: center;
+  font-size: 26px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.username_poition{
+  position: absolute;
+  top: 22.5%;
+  height: 8%;
+  width: 98%;
+  text-align: center;
+  font-size: 26px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.password_poition{
+  position: absolute;
+  top: 39%;
+  height: 8%;
+  width: 98%;
+  text-align: center;
+  font-size: 26px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.password1_poition{
+  position: absolute;
+  top: 57%;
+  height: 8%;
+  width: 98%;
+  text-align: center;
+  font-size: 26px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.submit_poition{
+  position: absolute;
+  top: 80%;
+  height: 8%;
+  width: 98%;
+  text-align: center;
+  font-size: 26px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.email,
+.username,
+.password,
+.password1{
+  background-color: #494949;
+  font-size: 18px;
+  color: #ffffff;
+  height: 35px;
+  width: 50%;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: solid 1px;
+  border-color: #878787;
+  border-radius: 7px;
+}
+
+.submit{
+  background-color: #007000;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  font-size: 25px;
+  height: 50px;
+  width: 50%;
+  transition: background-color 0.5s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.submit:hover{
+  background-color: #00aa00;
+  cursor: pointer;
+}
+
+.submit:focus{
+  outline: none;
+}
+
+
+
+.error{
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  color: #ff0000;
+  position: absolute;
+  top: 75%;
+  width: 99%;
+}
+
+a{
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover{
+  color: #00ff00;
+}
+
+a:active{
+  color: #ff0000;
+}
+
+.a_l{
+  color: #ffffff;
+  font-size: 15px;
+}
+
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {
+  background-color: #4CAF50;
+  width: 30%;
+  z-index: 10;
+  position: absolute;
+  top: 83%;
+  left: 63%;
+  transition: 0.3s;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
